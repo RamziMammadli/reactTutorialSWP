@@ -1,0 +1,19 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.productsSection {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.productsCards {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

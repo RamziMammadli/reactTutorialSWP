@@ -1,0 +1,26 @@
+.container {
+    height: 60px;
+    width: 100%;
+    background-color: #f4f5f9;
+    display: flex;
+    justify-content: center;
+
+}
+.contentContainer {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navBtns {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+.navBtn {
+    border: none;
+    padding: 6px 10px 6px 10px;
+    background-color: orange;
+    border-radius: 10px;
+    cursor: pointer;
+}

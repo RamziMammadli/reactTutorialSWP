@@ -1,0 +1,16 @@
+.container {
+    border: none;
+    padding: 7px 11px 7px 11px;
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    transition: .5s;
+    width: 80%;
+    height: 30px;
+    border-radius: 15px;
+}
+.container:hover {
+    background-color: orangered;
+    color: white;
+    transition: .5s;
+}
