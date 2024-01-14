@@ -1,20 +1,25 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styles from './mainSection.module.css'
 import axios from 'axios'
 import { ProductCard } from '../ProductCard'
 import { useDispatch, useSelector } from 'react-redux'
 import { getProductsThunk } from '../../api/reducer/productsSlice'
+import { MainContext } from '../../api/context/context'
 
 const MainSection = () => {
 
     const data = useSelector((state) => state.get.products)
-    console.log('UI ',data);
 
+    const {name, surname} = useContext(MainContext)
+   
     const dispatch = useDispatch()
+
 
     useEffect(() => {
         dispatch(getProductsThunk())
     }, [])
+
+
 
 
     // const [data, setData] = useState([])
@@ -38,9 +43,10 @@ const MainSection = () => {
     <div className={styles.container}>
         <div className={styles.productsSection}>
             <h1>Best Selling</h1>
-            <div className={styles.productsCards}>
+            {/* <div className={styles.productsCards}>
                 {data.map(item => <ProductCard key={item.id} item={item} text='Add to Cart'/>)}
-            </div>
+            </div> */}
+            <p>{name} {surname}</p>
         </div>
     </div>
   )
